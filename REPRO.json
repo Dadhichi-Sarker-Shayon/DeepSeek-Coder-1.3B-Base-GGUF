@@ -1,0 +1,68 @@
+{
+  "model_id": "deepseek-ai/deepseek-coder-1.3b-base",
+  "revision": "c919139c3a9b4070729c8b2cca4847ab29ca8d94",
+  "license": "other",
+  "llama_cpp_commit": "6b790a9c291b5d7af3312bbf9f0c558aa023b13e",
+  "artifacts": [
+    {
+      "name": "deepseek-coder-1.3b-base-F16.gguf",
+      "bytes": 2694313952,
+      "sha256": "f31faf284e4e33b18ba681edbe80dfa908fca04ac7415e671a92f2c72efb18a7"
+    },
+    {
+      "name": "deepseek-coder-1.3b-base-Q4_K_M.gguf",
+      "bytes": 873453920,
+      "sha256": "934891ef9b069385faedcbc8fbd30d2f21e058edf6cce9082c9de6d884091b87"
+    },
+    {
+      "name": "deepseek-coder-1.3b-base-Q8_0.gguf",
+      "bytes": 1432090592,
+      "sha256": "59ce8a9265f91443da2e67d9215b83a280b24081bdbb3365de7dbf8b0d60059c"
+    }
+  ],
+  "created_utc": "2026-09-25T16:35:53.265622+00:00",
+  "ppl-results.json": {
+    "model": "deepseek-coder-1.3b-base",
+    "eval_file": "ppl-en.txt",
+    "measurements": {
+      "F16": {
+        "ppl": 18.015,
+        "error": 1.16298
+      },
+      "Q8_0": {
+        "ppl": 18.0253,
+        "error": 1.16328,
+        "ratio_to_f16": 1.0005717457674161
+      },
+      "Q4_K_M": {
+        "ppl": 18.316,
+        "error": 1.18239,
+        "ratio_to_f16": 1.0167082986400222
+      }
+    }
+  },
+  "result.json": {
+    "model": "deepseek-coder-1.3b-base",
+    "architecture": "LlamaForCausalLM",
+    "kind": "causal",
+    "smoke": "generation",
+    "generation": "warning: no usable GPU found, --gpu-layers option will be ignored\nwarning: one possible reason is that llama.cpp was compiled without GPU support\nwarning: consult docs/build.md for compilation instructions\n0.00.005.181 I llama_completion: llama backend init\n0.00.005.191 I llama_completion: load the model and apply lora adapter, if any\n0.01.187.340 I cmn          init: llama threadpool init, n_threads = 4\n0.01.352.550 I \n0.01.352.597 I system_info: n_threads = 4 (n_threads_batch = 4) / 12 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | \n0.01.352.598 I \n0.01.352.950 I sampler seed: 2049452835\n0.01.353.165 I sampler params: \n\trepeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000\n\tdry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64\n\ttop_k = 40, top_p = 0.950, min_p = 0.050, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000\n\tmirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900\n0.01.353.334 I sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> min-p -> ?xtc -> temp-ext -> dist \n0.01.353.339 I generate: n_ctx = 256, n_batch = 2048, n_predict = 16, n_keep = 1\n0.01.353.340 I \n a + b\n\n\ndef subtract(a, b):\n   \n\n0.02.929.174 I common_perf_print:    sampling time =       2.80 ms\n0.02.929.180 I common_perf_print:    samplers time =       0.97 ms /    27 tokens\n0.02.929.182 I common_perf_print:        load time =    1173.36 ms\n0.02.929.184 I common_perf_print: prompt eval time =     208.39 ms /    11 tokens (   18.94 ms per token,    52.79 tokens per second)\n0.02.929.186 I common_perf_print:        eval time =    1363.40 ms /    15 runs   (   90.89 ms per token,    11.00 tokens per second)\n0.02.929.187 I common_perf_print:       total time =    1576.84 ms /    26 tokens\n0.02.929.189 I common_perf_print: unaccounted time =       2.25 ms /   0.1 %      (total - sampling - prompt eval - eval) / (total)\n0.02.929.190 I common_perf_print:    graphs reused =         14\n",
+    "artifacts": [
+      {
+        "path": "deepseek-coder-1.3b-base-F16.gguf",
+        "bytes": 2694313952,
+        "sha256": "f31faf284e4e33b18ba681edbe80dfa908fca04ac7415e671a92f2c72efb18a7"
+      },
+      {
+        "path": "deepseek-coder-1.3b-base-Q8_0.gguf",
+        "bytes": 1432090592,
+        "sha256": "59ce8a9265f91443da2e67d9215b83a280b24081bdbb3365de7dbf8b0d60059c"
+      },
+      {
+        "path": "deepseek-coder-1.3b-base-Q4_K_M.gguf",
+        "bytes": 873453920,
+        "sha256": "934891ef9b069385faedcbc8fbd30d2f21e058edf6cce9082c9de6d884091b87"
+      }
+    ]
+  }
+}

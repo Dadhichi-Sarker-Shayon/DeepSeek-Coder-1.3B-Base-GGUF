@@ -1,0 +1,3 @@
+f31faf284e4e33b18ba681edbe80dfa908fca04ac7415e671a92f2c72efb18a7  deepseek-coder-1.3b-base-F16.gguf
+934891ef9b069385faedcbc8fbd30d2f21e058edf6cce9082c9de6d884091b87  deepseek-coder-1.3b-base-Q4_K_M.gguf
+59ce8a9265f91443da2e67d9215b83a280b24081bdbb3365de7dbf8b0d60059c  deepseek-coder-1.3b-base-Q8_0.gguf

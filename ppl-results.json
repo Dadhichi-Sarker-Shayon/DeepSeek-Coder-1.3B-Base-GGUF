@@ -1,0 +1,20 @@
+{
+  "model": "deepseek-coder-1.3b-base",
+  "eval_file": "ppl-en.txt",
+  "measurements": {
+    "F16": {
+      "ppl": 18.015,
+      "error": 1.16298
+    },
+    "Q8_0": {
+      "ppl": 18.0253,
+      "error": 1.16328,
+      "ratio_to_f16": 1.0005717457674161
+    },
+    "Q4_K_M": {
+      "ppl": 18.316,
+      "error": 1.18239,
+      "ratio_to_f16": 1.0167082986400222
+    }
+  }
+}
