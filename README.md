@@ -21,9 +21,9 @@ Pinned llama.cpp conversion of the official 1.3B base model. The previously list
 
 | File | Purpose |
 |---|---|
-| `DeepSeek-Coder-1.3B-Base-F16.gguf` | Reference quality |
-| `DeepSeek-Coder-1.3B-Base-Q8_0.gguf` | Higher-quality compact format |
-| `DeepSeek-Coder-1.3B-Base-Q4_K_M.gguf` | Smallest release format |
+| `deepseek-coder-1.3b-base-F16.gguf` | Reference quality |
+| `deepseek-coder-1.3b-base-Q8_0.gguf` | Higher-quality compact format |
+| `deepseek-coder-1.3b-base-Q4_K_M.gguf` | Smallest release format |
 
 ## Validation
 
