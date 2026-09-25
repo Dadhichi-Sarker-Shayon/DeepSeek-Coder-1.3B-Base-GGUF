@@ -9,9 +9,25 @@ tags:
 - text-generation
 - code
 - deepseek
+- code-completion
+- 1.3b
+- quantization
+- q4_k_m
+- q8_0
 ---
 
 # DeepSeek-Coder 1.3B Base GGUF
+
+<div align="center">
+
+<img alt="Model" src="https://img.shields.io/badge/model-DeepSeek--Coder--1.3B--base-8A2BE2?style=for-the-badge">
+<img alt="GGUF formats" src="https://img.shields.io/badge/GGUF-F16%20%7C%20Q8_0%20%7C%20Q4_K_M-FFD21E?style=for-the-badge">
+<img alt="Task" src="https://img.shields.io/badge/task-code--completion-00A6A6?style=for-the-badge">
+<img alt="Parameters" src="https://img.shields.io/badge/params-1.3B-16A34A?style=for-the-badge">
+<img alt="Base model" src="https://img.shields.io/badge/type-base%20(not%20instruct)-0069B4?style=for-the-badge">
+<img alt="License" src="https://img.shields.io/badge/license-DeepSeek%20Model%20License-E8590C?style=for-the-badge">
+
+</div>
 
 [Source model](https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base) · [HF release](https://huggingface.co/ShayonSarker/DeepSeek-Coder-1.3B-Base-GGUF) · [Build hub](https://github.com/Dadhichi-Sarker-Shayon/DeepSeek-Coder-1.3B-Base-GGUF)
 
@@ -19,11 +35,26 @@ Pinned llama.cpp conversion of the official 1.3B base model. The previously list
 
 ## Formats
 
-| File | Purpose |
+| File | Status | Purpose |
+|---|---|---|
+| `deepseek-coder-1.3b-base-F16.gguf` | Published | Reference quality |
+| `deepseek-coder-1.3b-base-Q8_0.gguf` | Published | Higher-quality compact format |
+| `deepseek-coder-1.3b-base-Q4_K_M.gguf` | Published | Smallest release format |
+
+## Verified code completions
+
+Verbatim `deepseek-coder-1.3b-base-Q4_K_M.gguf` completions, `--temp 0`, 24 new tokens. This is the **base** checkpoint, so it continues code rather than answering instructions. The prompt is shown as the `def`/`for`/`SELECT` line plus the already-given `return` or `print(`, and the model's text is reproduced as-is.
+
+| Prompt | Model completion |
 |---|---|
-| `deepseek-coder-1.3b-base-F16.gguf` | Reference quality |
-| `deepseek-coder-1.3b-base-Q8_0.gguf` | Higher-quality compact format |
-| `deepseek-coder-1.3b-base-Q4_K_M.gguf` | Smallest release format |
+| `def is_even(number):`<br>`    return` | `number % 2 == 0` |
+| `def reverse_text(text):`<br>`    return` | `text[::-1]` |
+| `def factorial(number):`<br>`    if number <= 1:`<br>`        return` | `1`<br>`    else:`<br>`        return number * factorial(number - 1)` |
+| `def sum_list(numbers):`<br>`    return` | `sum(numbers)` |
+| `def find_max(numbers):`<br>`    return` | `max(numbers)` |
+| `for index, item in enumerate(items):`<br>`    print(` | `index, item)` |
+
+Python body completions are correct in all five cases. SQL is not: `SELECT name FROM users WHERE active =` continues into unrelated JavaScript-style ORM code, and `SELECT COUNT(*) FROM orders WHERE total >` returns a bare number. The `def`-style prompts are also filled with boilerplate follow-ups such as a generated `is_odd` helper, trimmed above.
 
 ## Validation
 
