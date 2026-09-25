@@ -13,7 +13,7 @@ tags:
 
 # DeepSeek-Coder 1.3B Base GGUF
 
-[Source model](https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base) · [Build hub](https://github.com/Dadhichi-Sarker-Shayon/DeepSeek-Coder-1.3B-Base-GGUF)
+[Source model](https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base) · [HF release](https://huggingface.co/ShayonSarker/DeepSeek-Coder-1.3B-Base-GGUF) · [Build hub](https://github.com/Dadhichi-Sarker-Shayon/DeepSeek-Coder-1.3B-Base-GGUF)
 
 Pinned llama.cpp conversion of the official 1.3B base model. The previously listed `deepseek-ai/deepseek-coder-1b` repository does not exist; this release uses the official 1.3B base checkpoint.
 
